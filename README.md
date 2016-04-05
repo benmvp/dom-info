@@ -2,6 +2,7 @@
 
 [![version](https://img.shields.io/npm/v/dom-info.svg?style=flat-square)](http://npm.im/dom-info)
 [![Build Status](https://travis-ci.org/benmvp/dom-info.svg?branch=master)](https://travis-ci.org/benmvp/dom-info)
+[![Coverage Status](https://coveralls.io/repos/github/benmvp/dom-info/badge.svg?branch=master)](https://coveralls.io/github/benmvp/dom-info?branch=master)
 [![Dependencies status](https://img.shields.io/david/benmvp/dom-info.svg?style=flat-square)](https://david-dm.org/benmvp/dom-info#info=dependencies)
 [![Dev Dependencies status](https://img.shields.io/david/dev/benmvp/dom-info.svg?style=flat-square)](https://david-dm.org/benmvp/dom-info#info=devDependencies)
 [![downloads](https://img.shields.io/npm/dt/dom-info.svg?style=flat-square)](http://npm-stat.com/charts.html?package=dom-info&from=2016-03-27)
@@ -33,7 +34,7 @@ import * as domnInfo from 'dom-info'; // ES6+
 var domnInfo = require('dom-info'); // ES5-
 ```
 
-As a last resort, you can download [`dist/dom-info.min.js`](https://raw.githubusercontent.com/benmvp/dom-info/master/dist/dom-info.min.js) (or just [`dist/dom-info-core.min.js`](https://raw.githubusercontent.com/benmvp/dom-info/master/dist/dom-info-core.min.js)) and include it on your web page via a `<script>` tag. It will create a global `window.domnInfo` object (or define the module if you are using [RequireJS](http://requirejs.org/)):
+As a last resort, you can download [`dist/dom-info.min.js`](https://raw.githubusercontent.com/benmvp/dom-info/master/dist/dom-info.min.js) and include it on your web page via a `<script>` tag. It will create a global `window.domInfo` object (or define the module if you are using [RequireJS](http://requirejs.org/)):
 
 ```html
 <script src="/lib/dom-info.min.js" type="text/javascript"></script>
@@ -41,15 +42,21 @@ As a last resort, you can download [`dist/dom-info.min.js`](https://raw.githubus
 
 ## API Docs
 
-Coming soon...
+- [`getStyle`](docs/getStyle.md) - Returns the value of the specified style property (or style properties) for the specified node.
 
-## Contributing
+Check out the [docs](docs/) for more examples or [try out `dom-info` in your browser](https://tonicdev.com/npm/dom-info)!
 
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+## Browser support
+
+`dom-info` has been tested in [Internet Explorer 9+](http://windows.microsoft.com/en-us/internet-explorer/download-ie), [Chrome](https://www.google.com/chrome/browser/desktop/), [Firefox](https://www.mozilla.org/en-US/firefox/new/), [Safari](http://www.apple.com/safari/), [Opera](http://www.opera.com/) and [Edge](https://www.microsoft.com/en-us/windows/microsoft-edge). Some functionality may also work in older browsers, but is unsupported.
 
 ## Project philosophy
 
 We take the stability of this utility package **very** seriously. `dom-info` follows the [SemVer](http://semver.org/) standard for versioning. All updates must also keep the library lightweight.
+
+## Contributing
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ## License
 

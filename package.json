@@ -2,13 +2,18 @@
   "name": "dom-info",
   "version": "0.0.1",
   "description": "A jQuery-alternative for retrieving info about rendered DOM nodes.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "npm run minify && npm run gzip",
+    "build": "mkdir -p dist && npm run minify && npm run gzip",
+    "cat": "cat lib/index.js lib/getStyle.js > dist/dom-info.js",
+    "minify": "npm run cat && uglifyjs --compress --mangle --output dist/dom-info.min.js dist/dom-info.js",
     "gzip": "gzip -c dist/dom-info.min.js > dist/dom-info.min.js.gz",
-    "minify": "mkdir -p dist && uglifyjs --compress --mangle --comments --output dist/dom-info.min.js index.js",
     "lint": "eslint .",
-    "test": "npm run lint",
+    "test": "mocha lib/*.spec.js",
+    "test-coverage": "istanbul cover _mocha -- -R spec lib/*.spec.js",
+    "test-coverage-ci": "istanbul cover _mocha --report lcovonly -- -R spec lib/*.spec.js",
+    "validate": "npm run lint && npm run test",
+    "validate-ci": "npm run lint && npm run test-coverage-ci",
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags",
@@ -38,16 +43,19 @@
   "homepage": "https://github.com/benmvp/dom-info#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
     "eslint": "^2.6.0",
-    "eslint-config-benmvp": "^1.0.1",
+    "eslint-config-benmvp": "^2.0.0",
+    "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
     "pre-commit": "^1.1.2",
+    "sinon": "^1.17.3",
     "uglify-js": "^2.6.2"
   },
   "engines": {
     "node": ">=0.10"
   },
   "pre-commit": [
-    "test"
+    "validate"
   ]
 }
