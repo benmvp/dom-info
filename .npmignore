@@ -2,4 +2,4 @@
 /.*
 /coverage/
 /docs/
-/*.spec.js
+/tests/

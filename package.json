@@ -5,13 +5,13 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "mkdir -p dist && npm run minify && npm run gzip",
-    "cat": "cat lib/index.js lib/getStyle.js > dist/dom-info.js",
+    "cat": "cat lib/index.js lib/supportsStyle.js lib/getStyle.js > dist/dom-info.js",
     "minify": "npm run cat && uglifyjs --compress --mangle --output dist/dom-info.min.js dist/dom-info.js",
     "gzip": "gzip -c dist/dom-info.min.js > dist/dom-info.min.js.gz",
     "lint": "eslint .",
-    "test": "mocha lib/*.spec.js",
-    "test-coverage": "istanbul cover _mocha -- -R spec lib/*.spec.js",
-    "test-coverage-ci": "istanbul cover _mocha --report lcovonly -- -R spec lib/*.spec.js",
+    "test": "mocha tests/*.spec.js",
+    "test-coverage": "istanbul cover _mocha -- -R spec tests/*.spec.js",
+    "test-coverage-ci": "istanbul cover _mocha --report lcovonly -- -R spec tests/*.spec.js",
     "validate": "npm run lint && npm run test",
     "validate-ci": "npm run lint && npm run test-coverage-ci",
     "preversion": "npm test",
@@ -49,7 +49,6 @@
     "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
     "pre-commit": "^1.1.2",
-    "sinon": "^1.17.3",
     "uglify-js": "^2.6.2"
   },
   "engines": {

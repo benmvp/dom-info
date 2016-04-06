@@ -16,10 +16,6 @@ Please use this document as a place to float new ideas. Please be as specific wi
   - See [`Uize.Web.prototype.coords`](http://www.uize.com/reference/Uize.Web.html#6_25)
 - `isVisible` - gets whether or not the DOM node is "visible"
   - See the `seen` property from [`Uize.Dom.Pos.getCoords`](http://www.uize.com/reference/Uize.Dom.Pos.html#2_3)
-- `supportsStyle`- gets whether or not a DOM node supports the specified CSS property
-  - See [`Uize.Web.prototype.supportsCss`](http://www.uize.com/reference/Uize.Web.html#6_132)
-- `getStyle` - gets the computed value of one or more CSS properties for a DOM node
-  - See [`Uize.Web.prototype.css`](http://www.uize.com/reference/Uize.Web.html#6_26)
 - `getOffset` - gets the coordinates of a DOM node relative to its offset parent
   - See [`Uize.Web.prototype.offset`](http://www.uize.com/reference/Uize.Web.html#6_86)
 - `getOffsetParent` - gets the closest ancestor of a DOM node that is positioned (absolutely or relatively)
@@ -33,8 +29,15 @@ Please use this document as a place to float new ideas. Please be as specific wi
   - API: `object = getAbsolutePosAdjacent(node: DOMNode, targetNode: DOMNode, pivotAxis: ['x'|'y'])`
   - See [`Uize.Dom.Pos.setAbsPosAdjacentTo`](http://www.uize.com/reference/Uize.Dom.Pos.html#2_8)
 
+### Other utility ideas
+
+- `supportsTag` - returns whether or not the specified `tagName` is supported by the browser
+  - Most useful for new HTML5 tags like `<svg>`, `<video>`, etc.
+  - Similar in interface to `supportsStyle`
+
 -----
 
 ## Done
 
-None, yet!
+- [`getStyle`](docs/getStyle.md)
+- [`supportsStyle`](docs/supportsStyle.md)

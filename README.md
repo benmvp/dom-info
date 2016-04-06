@@ -31,7 +31,7 @@ Use with [webpack](https://webpack.github.io/) or [browserify](http://browserify
 
 ```js
 import * as domnInfo from 'dom-info'; // ES6+
-var domnInfo = require('dom-info'); // ES5-
+var domnInfo = require('dom-info'); // ES5
 ```
 
 As a last resort, you can download [`dist/dom-info.min.js`](https://raw.githubusercontent.com/benmvp/dom-info/master/dist/dom-info.min.js) and include it on your web page via a `<script>` tag. It will create a global `window.domInfo` object (or define the module if you are using [RequireJS](http://requirejs.org/)):
@@ -43,6 +43,7 @@ As a last resort, you can download [`dist/dom-info.min.js`](https://raw.githubus
 ## API Docs
 
 - [`getStyle`](docs/getStyle.md) - Returns the value of the specified style property (or style properties) for the specified node.
+- [`supportsStyle`](docs/supportsStyle.md) - Returns whether or not the specified CSS property is supported in the current browser.
 
 Check out the [docs](docs/) for more examples or [try out `dom-info` in your browser](https://tonicdev.com/npm/dom-info)!
 
@@ -52,7 +53,7 @@ Check out the [docs](docs/) for more examples or [try out `dom-info` in your bro
 
 ## Project philosophy
 
-We take the stability of this utility package **very** seriously. `dom-info` follows the [SemVer](http://semver.org/) standard for versioning. All updates must also keep the library lightweight.
+We take the stability of this utility package **very** seriously. `dom-info` follows the [SemVer](http://semver.org/) standard for versioning. All updates must also keep the library lightweight by providing each piece of functionality in a separate module.
 
 ## Contributing
 
