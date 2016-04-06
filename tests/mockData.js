@@ -8,7 +8,8 @@ var MOCK_STYLE = {
         msTransform: 'rotate(7deg)',
         oLineSnap: 'baseline',
         borderRadius: '10px',
-        webkitBorderRadius: '10px'
+        webkitBorderRadius: '10px',
+        padding: ''
     },
     MOCK_WINDOW = {
         getComputedStyle: function() {

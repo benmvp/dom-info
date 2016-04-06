@@ -20,7 +20,7 @@ describe('supportsStyle', function() {
     [undefined, MOCK_DATA.MOCK_NODE].forEach(function(node) {
         describe('when ' + (node ? '' : 'no ') + 'node is passed', function() {
             it('returns `undefined` for CSS property that is not supported', function() {
-                expect(supportsStyle('foo', node)).to.be.undefined;
+                expect(supportsStyle('grid', node)).to.be.undefined;
             });
 
             it('returns back property for non-prefixed CSS property', function() {
@@ -49,6 +49,10 @@ describe('supportsStyle', function() {
 
             it('prefers unprefixed property over prefixed property', function() {
                 expect(supportsStyle('borderRadius', node)).to.equal('borderRadius');
+            });
+
+            it('supports CSS property when its value is empty string', function() {
+                expect(supportsStyle('padding', node)).to.equal('padding');
             });
         });
     });
