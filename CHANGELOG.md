@@ -1,3 +1,6 @@
+## v0.3.1 (April 7, 2016)
+- [patch] Add support for empty string for [`getStyle`](docs/getStyle.md) propertyName to return all styles
+
 ## v0.3.0 (April 7, 2016)
 - [minor] Add [`getDimensions`](docs/getDimensions.md)
 
