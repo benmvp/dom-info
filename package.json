@@ -1,6 +1,6 @@
 {
   "name": "dom-info",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A jQuery-alternative for retrieving info about rendered DOM nodes.",
   "main": "lib/index.js",
   "scripts": {
