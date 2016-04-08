@@ -8,9 +8,6 @@ Please use this document as a place to float new ideas. Please be as specific wi
 
 (in somewhat priority order)
 
-- `getDimensions` - gets the computed dimensions for a DOM node, including padding, border, and optional margin
-  - Returns `width` & `height` properties
-  - See [`Uize.Web.prototype.dimensions`](http://www.uize.com/reference/Uize.Web.html#6_32)
 - `getCoords` - gets the coordinates of a DOM node, relative to the document or view port
   - Returns `x`, `y`, `top`, `left`, `bottom` & `right` properties
   - See [`Uize.Web.prototype.coords`](http://www.uize.com/reference/Uize.Web.html#6_25)
@@ -41,3 +38,4 @@ Please use this document as a place to float new ideas. Please be as specific wi
 
 - [`getStyle`](docs/getStyle.md)
 - [`supportsStyle`](docs/supportsStyle.md)
+- [`getDimensions`](docs/getDimensions.md)

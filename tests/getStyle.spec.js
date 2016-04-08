@@ -2,7 +2,7 @@
 
 var expect = require('chai').expect,
     getStyle = require('../lib/getStyle'),
-    
+
     MOCK_DATA = require('./mockData');
 
 describe('getStyle', function() {
@@ -42,6 +42,13 @@ describe('getStyle', function() {
 
             expect(value).to.equal('left 0s');
         });
+
+        it('returns all styles when empty string is specified for property name', function() {
+            var value = getStyle('', MOCK_DATA.MOCK_NODE);
+
+            expect(value).to.deep.equal(MOCK_DATA.MOCK_STYLE);
+            expect(value).to.not.equal(window.getComputedStyle(MOCK_DATA.MOCK_NODE));
+        });
     });
 
     describe('when property array is specified', function() {
@@ -76,6 +83,26 @@ describe('getStyle', function() {
                 borderRadius: '10px',
                 mozFlexDirection: 'row-reverse'
             });
+        });
+    });
+
+    describe('when property object is specified', function() {
+        it('returns empty object when node `undefined`', function() {
+            var value = getStyle({'marginTop': 1, 'marginBottom': 1});
+
+            expect(value).to.deep.equal({});
+        });
+
+        it('returns empty object when node is `window`', function() {
+            var value = getStyle({'marginTop': 1, 'marginBottom': 1}, MOCK_DATA.MOCK_WINDOW);
+
+            expect(value).to.deep.equal({});
+        });
+
+        it('returns empty object when regular node is specified', function() {
+            var value = getStyle({'display': 1, 'marginBottom': 1}, MOCK_DATA.MOCK_NODE);
+
+            expect(value).to.deep.equal({});
         });
     });
 });

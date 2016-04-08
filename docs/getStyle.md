@@ -27,7 +27,7 @@ With the above code, `marginTop` would be a string such as: `'20px'`.
 
 The CSS property must use the camelCase syntax (e.g. `marginTop`) provided by the DOM API and not the hyphen snake case syntax (e.g. `margin-top`) used in CSS.
 
-`getStyle` also automatically retrieves vendor-prefixed properties (such as [CSS3 transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)). Just specify the standards name (e.g. `'transition'`) and if that's not found, it will search the vendor-prefixed versions (e.g. ``webkitTransition`, `mozTransition`, etc.).
+`getStyle` also automatically retrieves vendor-prefixed properties (such as [CSS3 transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)). Just specify the standards name (e.g. `'transition'`) and if that's not found, it will search the vendor-prefixed versions (e.g. `webkitTransition`, `mozTransition`, etc.).
 
 ### Multiple properties
 
@@ -46,4 +46,17 @@ With the above code, `properties` would be an object such as: `{marginTop: '20px
 
 The CSS property must use the camelCase syntax (e.g. `marginTop`) provided by the DOM API and not the hyphen snake case syntax (e.g. `margin-top`) used in CSS.
 
-`getStyle` also automatically retrieves vendor-prefixed properties (such as [CSS3 transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)). Just specify the standards name (e.g. `'transition'`) and if that's not found, it will search the vendor-prefixed versions (e.g. ``webkitTransition`, `mozTransition`, etc.).
+`getStyle` also automatically retrieves vendor-prefixed properties (such as [CSS3 transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)). Just specify the standards name (e.g. `'transition'`) and if that's not found, it will search the vendor-prefixed versions (e.g. `webkitTransition`, `mozTransition`, etc.).
+
+### All properties
+
+Passing empty string(`''`) as the `propertyName` will return all of the CSS style properties. In this variation, an object lookup mapping property names to property values is returned.
+
+```js
+var getStyle = require('dom-info/getStyle');
+
+var node = document.getElementById('node'),
+    allProperties = getStyle('', node);
+```
+
+With the above code, `allProperties` would be an object with **all** of the computed style properties.

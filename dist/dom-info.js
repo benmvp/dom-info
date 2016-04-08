@@ -144,6 +144,21 @@
 })(function(supportsStyle) {
     'use strict';
 
+    function _cloneComputedStyles(computedStyles) {
+        return Object.keys(computedStyles).reduce(function(prevStyles, key) {
+            var styles = prevStyles;
+
+            // The keys in the CSSStyleDeclaration object are both CSS property names (like "marginTop")
+            // as well as numeric values pointing to CSS-style property names (like "margin-top"). We
+            // only want the former, so we exlcude the numeric ones.
+            if (isNaN(+key)) {
+                styles[key] = computedStyles[key];
+            }
+
+            return styles;
+        }, {});
+    }
+
     /**
     * Returns the computed value (or values) of the specified style property (or properties) for the specified DOM node
     * @param {string|string[]} propertyName - the name of the style property (or list of style properties) to retrieve
@@ -152,15 +167,18 @@
     */
     function getStyle(propertyName, node) {
         var propertyIsString = typeof propertyName === 'string',
-            value = propertyIsString ? '' : {};
+            value = propertyIsString ? '' : {},
+            computedStyles;
 
         if (node && node !== window) {
             if (propertyIsString) {
+                computedStyles = window.getComputedStyle(node, null);
+
                 // When property is a string, just grab the value of the property from the computed style
                 // Uses `supportsStyle` to get the vendor-prefixed propertyName when applicable
-                value = window.getComputedStyle(node)[
-                    supportsStyle(propertyName, node)
-                ];
+                value = propertyName
+                    ? computedStyles[supportsStyle(propertyName, node)]
+                    : _cloneComputedStyles(computedStyles);
             }
             else if (Array.isArray(propertyName)) {
                 // When property is an array just loop through the names and call `getStyle` recursively

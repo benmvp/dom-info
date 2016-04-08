@@ -15,7 +15,25 @@ var MOCK_STYLE = {
     },
     MOCK_WINDOW = {
         getComputedStyle: function(node) {
-            return node.style;
+            // Simulate CSSStyleDeclaration
+
+            // first add numeric keys that maps to property names
+            var computedStyle = Object.keys(MOCK_STYLE).reduce(function(prevComputedStyle, propertyName, index) {
+                var nextComputedStyle = prevComputedStyle;
+
+                nextComputedStyle[index] = propertyName;
+
+                return nextComputedStyle;
+            }, {});
+
+            // Then add the actual style properties and their values
+            return Object.keys(node.style).reduce(function(prevComputedStyle, propertyName) {
+                var nextComputedStyle = prevComputedStyle;
+
+                nextComputedStyle[propertyName] = node.style[propertyName];
+
+                return nextComputedStyle;
+            }, computedStyle);
         },
         innerWidth: 795,
         innerHeight: 678
