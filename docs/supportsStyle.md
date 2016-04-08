@@ -36,7 +36,9 @@ if (!supportsStyle('transition', node)) {
 
 Specifying a specific `node` is rarely necessary, but may come in handy if a specific CSS property on applies to DOM nodes of a specific type.
 
-_NOTE:_ The CSS property must use the camelCase syntax (e.g. `marginTop`) provided by the DOM API and not the hyphen snake case syntax (e.g. `margin-top`) used in CSS.
+###### NOTE
+
+The CSS property must use the camelCase syntax (e.g. `marginTop`) provided by the DOM API and not the hyphen snake case syntax (e.g. `margin-top`) used in CSS.
 
 ### Vendor-prefixed properties
 

@@ -2,6 +2,7 @@
 
 var expect = require('chai').expect,
     getStyle = require('../lib/getStyle'),
+    
     MOCK_DATA = require('./mockData');
 
 describe('getStyle', function() {
@@ -24,6 +25,12 @@ describe('getStyle', function() {
             expect(value).to.equal('');
         });
 
+        it('returns empty string when node is `window`', function() {
+            var value = getStyle('marginTop', MOCK_DATA.MOCK_WINDOW);
+
+            expect(value).to.equal('');
+        });
+
         it('returns the property value for the node', function() {
             var value = getStyle('marginTop', MOCK_DATA.MOCK_NODE);
 
@@ -40,6 +47,12 @@ describe('getStyle', function() {
     describe('when property array is specified', function() {
         it('returns empty object when node `undefined`', function() {
             var value = getStyle(['marginTop', 'marginBottom']);
+
+            expect(value).to.deep.equal({});
+        });
+
+        it('returns empty OBJECT when node is `window`', function() {
+            var value = getStyle(['marginTop', 'marginBottom'], MOCK_DATA.MOCK_WINDOW);
 
             expect(value).to.deep.equal({});
         });

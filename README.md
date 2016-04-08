@@ -42,6 +42,7 @@ As a last resort, you can download [`dist/dom-info.min.js`](https://raw.githubus
 
 ## API Docs
 
+- [`getDimensions`](docs/getDimensions.md) - Gets the computed pixel dimensions for the specified DOM node, including `padding`, `border`, and optionally `margin`.
 - [`getStyle`](docs/getStyle.md) - Returns the value of the specified style property (or style properties) for the specified node.
 - [`supportsStyle`](docs/supportsStyle.md) - Returns whether or not the specified CSS property is supported in the current browser.
 

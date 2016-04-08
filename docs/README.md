@@ -1,7 +1,25 @@
 # API Docs
 
+- [`getDimensions`](#getDimensions)
 - [`getStyle`](#getStyle)
 - [`supportsStyle`](#supportsStyle)
+
+## [`getDimensions`](getDimensions.md)
+
+Gets the computed pixel dimensions for the specified DOM node, including `padding`, `border`, and optionally `margin`.
+
+```js
+var getDimensions = require('dom-info/getDimensions');
+
+var node = document.getElementById('node'),
+    dimensions = getDimensions(node);
+```
+
+The above code will return an object with `width`/`height` properties that contain numeric values, representing the rendered dimensions of `node` in pixel. An example would be: `{width: 25, height: 33}`.
+
+Read full documentation for [`getDimensions`](getDimensions.md).
+
+-----
 
 ## [`getStyle`](getStyle.md)
 

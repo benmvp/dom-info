@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "mkdir -p dist && npm run minify && npm run gzip",
-    "cat": "cat lib/index.js lib/supportsStyle.js lib/getStyle.js > dist/dom-info.js",
+    "cat": "cat lib/index.js lib/supportsStyle.js lib/getStyle.js lib/getDimensions.js > dist/dom-info.js",
     "minify": "npm run cat && uglifyjs --compress --mangle --output dist/dom-info.min.js dist/dom-info.js",
     "gzip": "gzip -c dist/dom-info.min.js > dist/dom-info.min.js.gz",
     "lint": "eslint .",

@@ -23,9 +23,11 @@ var node = document.getElementById('node'),
 
 With the above code, `marginTop` would be a string such as: `'20px'`.
 
-_NOTE:_ The CSS property must use the camelCase syntax (e.g. `marginTop`) provided by the DOM API and not the hyphen snake case syntax (e.g. `margin-top`) used in CSS.
+###### NOTES
 
-_NOTE:_ `getStyle` also automatically retrieves vendor-prefixed properties (such as [CSS3 transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)). Just specify the standards name (e.g. `'transition'`) and if that's not found, it will search the vendor-prefixed versions (e.g. ``webkitTransition`, `mozTransition`, etc.).
+The CSS property must use the camelCase syntax (e.g. `marginTop`) provided by the DOM API and not the hyphen snake case syntax (e.g. `margin-top`) used in CSS.
+
+`getStyle` also automatically retrieves vendor-prefixed properties (such as [CSS3 transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)). Just specify the standards name (e.g. `'transition'`) and if that's not found, it will search the vendor-prefixed versions (e.g. ``webkitTransition`, `mozTransition`, etc.).
 
 ### Multiple properties
 
@@ -40,6 +42,8 @@ var node = document.getElementById('node'),
 
 With the above code, `properties` would be an object such as: `{marginTop: '20px', color: '#ffffff', flex: '0 0 12rem'}`.
 
-_NOTE:_ The CSS property must use the camelCase syntax (e.g. `marginTop`) provided by the DOM API and not the hyphen snake case syntax (e.g. `margin-top`) used in CSS.
+###### NOTES
 
-_NOTE:_ `getStyle` also automatically retrieves vendor-prefixed properties (such as [CSS3 transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)). Just specify the standards name (e.g. `'transition'`) and if that's not found, it will search the vendor-prefixed versions (e.g. ``webkitTransition`, `mozTransition`, etc.).
+The CSS property must use the camelCase syntax (e.g. `marginTop`) provided by the DOM API and not the hyphen snake case syntax (e.g. `margin-top`) used in CSS.
+
+`getStyle` also automatically retrieves vendor-prefixed properties (such as [CSS3 transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)). Just specify the standards name (e.g. `'transition'`) and if that's not found, it will search the vendor-prefixed versions (e.g. ``webkitTransition`, `mozTransition`, etc.).
