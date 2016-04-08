@@ -1,3 +1,6 @@
+## v0.3.0 (April 7, 2016)
+- [minor] Add [`getDimensions`](docs/getDimensions.md)
+
 ## v0.2.0 (April 6, 2016)
 - [minor] Add [`supportsStyle`](docs/supportsStyle.md)
 - [tests] Move tests to [`tests`](tests/) folder
