@@ -10,6 +10,7 @@
     "gzip": "gzip -c dist/dom-info.min.js > dist/dom-info.min.js.gz",
     "lint": "eslint .",
     "test": "mocha tests/*.spec.js",
+    "test:watch": "mocha -w tests/*.spec.js",
     "test-coverage": "istanbul cover _mocha -- -R spec tests/*.spec.js",
     "test-coverage-ci": "istanbul cover _mocha --report lcovonly -- -R spec tests/*.spec.js",
     "validate": "npm run lint && npm run test",
@@ -17,10 +18,10 @@
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags",
-    "release": "npm run release-patch",
-    "release-patch": "npm version patch --message 'Patch release v%s' && npm publish",
-    "release-minor": "npm version minor --message 'Minor release v%s' && npm publish",
-    "release-major": "npm version major --message 'Major release v%s' && npm publish"
+    "release": "npm run release:patch",
+    "release:patch": "npm version patch --message 'Patch release v%s' && npm publish",
+    "release:minor": "npm version minor --message 'Minor release v%s' && npm publish",
+    "release:major": "npm version major --message 'Major release v%s' && npm publish"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,7 @@
     "dimensions",
     "position"
   ],
-  "author": "Ben Ilegbodu",
+  "author": "Ben Ilegbodu <ben@benmvp.com> (http://www.benmvp.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/benmvp/dom-info/issues"
