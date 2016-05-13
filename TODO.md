@@ -32,6 +32,10 @@ Please use this document as a place to float new ideas. Please be as specific wi
   - Most useful for new HTML5 tags like `<svg>`, `<video>`, etc.
   - Similar in interface to `supportsStyle`
 
+### Miscellaneous
+
+- Update `suppportsStyle` to use `CSS.supports` if it exists first.
+
 -----
 
 ## Done
