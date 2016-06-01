@@ -10,14 +10,14 @@ describe('supportsStyle', function() {
     });
 
     after(function() {
-        document = undefined;
+        document = null;
     });
 
     it('is a function', function() {
         expect(supportsStyle).to.be.a('function');
     });
 
-    [undefined, MOCK_DATA.MOCK_NODE].forEach(function(node) {
+    [null, MOCK_DATA.MOCK_NODE].forEach(function(node) {
         describe('when ' + (node ? '' : 'no ') + 'node is passed', function() {
             it('returns `undefined` for CSS property that is not supported', function() {
                 expect(supportsStyle('grid', node)).to.be.undefined;

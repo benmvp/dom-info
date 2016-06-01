@@ -11,7 +11,7 @@ describe('getStyle', function() {
     });
 
     after(function() {
-        window = undefined;
+        window = null;
     });
 
     it('is a function', function() {
