@@ -13,7 +13,7 @@
 
 [![Watch on GitHub](https://img.shields.io/github/watchers/benmvp/dom-info.svg?style=social)](https://github.com/benmvp/dom-info/watchers)
 [![Star on GitHub](https://img.shields.io/github/stars/benmvp/dom-info.svg?style=social)](https://github.com/benmvp/dom-info/stargazers)
-[![Tweet](https://img.shields.io/twitter/url/https/github.com/benmvp/dom-info.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20dom-info!%20https://github.com/benmvp/dom-info%20%F0%9F%91%8D)
+[![Tweet](https://img.shields.io/twitter/url/https/github.com/benmvp/dom-info.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20dom-info%20by%20%40benmvp!%0A%0Ahttps%3A%2F%2Fgithub.com%2Fbenmvp%2Fdom-info)
 
 A jQuery-alternative for retrieving info about rendered DOM nodes.
 
