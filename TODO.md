@@ -17,6 +17,10 @@ Please use this document as a place to float new ideas. Please be as specific wi
   - See [`Uize.Web.prototype.offset`](http://www.uize.com/reference/Uize.Web.html#6_86)
 - `getOffsetParent` - gets the closest ancestor of a DOM node that is positioned (absolutely or relatively)
   - See [`Uize.Web.prototype.offsetParent`](http://www.uize.com/reference/Uize.Web.html#6_87)
+- `getScrollableParent` - gets the closest ancestor of a DOM node that is scrollable
+  - See [`Uize.Fx.Scroll.scrollToNode`](http://www.uize.com/reference/Uize.Fx.Scroll.html#2_1)
+- `scrollToNode` scrolls the window/document vertically to bring a specified target node into view at the top of the window
+  - See [`Uize.Fx.Scroll.scrollToNode`](http://www.uize.com/reference/Uize.Fx.Scroll.html#2_1)
 - `getEventCoords` - gets the coordinates of a DOM event, relative to the document
   - See [`Uize.Dom.Pos.getEventAbsPos`](http://www.uize.com/reference/Uize.Dom.Pos.html#2_6)
 - `getAbsolutePos` - gets the coordinates needed to position a DOM node adjacent to target coordinates such that it will always be within the viewport
@@ -34,7 +38,7 @@ Please use this document as a place to float new ideas. Please be as specific wi
 
 ### Miscellaneous
 
-- Update `suppportsStyle` to use `CSS.supports` if it exists first.
+- Update `supportsStyle` to use `CSS.supports` if it exists first.
 
 -----
 

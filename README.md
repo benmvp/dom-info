@@ -1,13 +1,19 @@
 # dom-info
 
-[![version](https://img.shields.io/npm/v/dom-info.svg?style=flat-square)](http://npm.im/dom-info)
+[![version](https://img.shields.io/npm/v/dom-info.svg)](http://npm.im/dom-info)
+[![downloads](https://img.shields.io/npm/dt/dom-info.svg)](http://npm-stat.com/charts.html?package=dom-info&from=2016-03-27)
+![module formats: umds](https://img.shields.io/badge/module%20formats-umd-green.svg)
+[![license](https://img.shields.io/npm/l/dom-info.svg)](http://spdx.org/licenses/MIT)
+
+[![Maintenance Status](https://img.shields.io/badge/status-maintained-brightgreen.svg)](https://github.com/benmvp/dom-info/pulse)
 [![Build Status](https://travis-ci.org/benmvp/dom-info.svg?branch=master)](https://travis-ci.org/benmvp/dom-info)
 [![Coverage Status](https://coveralls.io/repos/github/benmvp/dom-info/badge.svg?branch=master)](https://coveralls.io/github/benmvp/dom-info?branch=master)
-[![Dependencies status](https://img.shields.io/david/benmvp/dom-info.svg?style=flat-square)](https://david-dm.org/benmvp/dom-info#info=dependencies)
-[![Dev Dependencies status](https://img.shields.io/david/dev/benmvp/dom-info.svg?style=flat-square)](https://david-dm.org/benmvp/dom-info#info=devDependencies)
-[![downloads](https://img.shields.io/npm/dt/dom-info.svg?style=flat-square)](http://npm-stat.com/charts.html?package=dom-info&from=2016-03-27)
-[![Maintenance Status](https://img.shields.io/badge/status-maintained-brightgreen.svg)](https://github.com/benmvp/dom-info/pulse)
-[![license](https://img.shields.io/npm/l/dom-info.svg?style=flat-square)](http://spdx.org/licenses/MIT)
+[![Dependencies status](https://img.shields.io/david/benmvp/dom-info.svg)](https://david-dm.org/benmvp/dom-info#info=dependencies)
+[![Dev Dependencies status](https://img.shields.io/david/dev/benmvp/dom-info.svg)](https://david-dm.org/benmvp/dom-info#info=devDependencies)
+
+[![Watch on GitHub](https://img.shields.io/github/watchers/benmvp/dom-info.svg?style=social)](https://github.com/benmvp/dom-info/watchers)
+[![Star on GitHub](https://img.shields.io/github/stars/benmvp/dom-info.svg?style=social)](https://github.com/benmvp/dom-info/stargazers)
+[![Tweet](https://img.shields.io/twitter/url/https/github.com/benmvp/dom-info.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20dom-info!%20https://github.com/benmvp/dom-info%20%F0%9F%91%8D)
 
 A jQuery-alternative for retrieving info about rendered DOM nodes.
 
@@ -21,6 +27,12 @@ As a result, DOM libraries like jQuery, [zepto.js](http://zeptojs.com/), and oth
 
 ## Installation
 
+Install via [Yarn](https://yarnpkg.com/lang/en/docs/managing-dependencies/):
+
+```sh
+yarn add dom-info
+```
+
 Install via [NPM](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```sh
@@ -30,8 +42,8 @@ npm install --save dom-info
 Use with [webpack](https://webpack.github.io/) or [browserify](http://browserify.org/):
 
 ```js
-import * as domnInfo from 'dom-info'; // ES6+
-var domnInfo = require('dom-info'); // ES5
+import * as domInfo from 'dom-info'; // ES6+
+var domInfo = require('dom-info'); // ES5
 ```
 
 As a last resort, you can download [`dist/dom-info.min.js`](https://raw.githubusercontent.com/benmvp/dom-info/master/dist/dom-info.min.js) and include it on your web page via a `<script>` tag. It will create a global `window.domInfo` object (or define the module if you are using [RequireJS](http://requirejs.org/)):
@@ -58,8 +70,8 @@ We take the stability of this utility package **very** seriously. `dom-info` fol
 
 ## Contributing
 
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+Contributions are welcome! See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 
 ## License
 
-[MIT](LICENSE). Copyright (c) 2016 Ben Ilegbodu.
+[MIT](LICENSE). Copyright (c) 2016-2017 Ben Ilegbodu.
