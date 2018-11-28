@@ -42,14 +42,14 @@
   },
   "homepage": "https://github.com/benmvp/dom-info#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "coveralls": "^2.11.9",
-    "eslint": "^2.6.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.9.0",
     "eslint-config-benmvp": "^4.0.1",
     "istanbul": "^0.4.2",
-    "mocha": "^2.4.5",
+    "mocha": "^5.2.0",
     "pre-commit": "^1.1.2",
-    "uglify-js": "^2.6.2"
+    "uglify-js": "^3.4.9"
   },
   "engines": {
     "node": ">=0.10"
